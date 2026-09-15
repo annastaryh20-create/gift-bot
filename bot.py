@@ -374,11 +374,11 @@ def handle_successful_payment(message):
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'HEAD'])
 def home():
     return "🤖 Бот работает!"
 
-@app.route('/health')
+@app.route('/health', methods=['GET', 'HEAD'])
 def health():
     return "OK", 200
 
